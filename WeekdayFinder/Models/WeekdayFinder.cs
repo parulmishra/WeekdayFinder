@@ -11,12 +11,14 @@ namespace WeekdayFinder.Models
     {
       _date = date;
     }
+    public string GetDate()
+    {
+      return _date;
+    }
     public string Day()
     {
-      string day = "";
       DateTime date = new DateTime(_date);
-      DateTime.Parse(date);
-      day = date.DayOfWeek;
+      string day = date.DayOfWeek.ToString();
       return day;
     }
   }
